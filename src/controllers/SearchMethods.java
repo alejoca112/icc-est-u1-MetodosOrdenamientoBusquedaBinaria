@@ -35,15 +35,15 @@ public class SearchMethods {
 
     
 
-    public Person binarySearchByName(Person[] personas, String name) {
+    public Person binarySearchByName(Person[] people, String name) {
         int izquierda = 0;
-        int derecha = personas.length - 1;
+        int derecha = people.length - 1;
         while (izquierda <= derecha) {
             int medio = izquierda + (derecha - izquierda) / 2;
-            String comparison = personas[medio].getName();
+            String comparison = people[medio].getName();
             int result = comparison.compareToIgnoreCase(name);
 
-            if (result == 0) return personas[medio];
+            if (result == 0) return people[medio];
             if (result < 0) izquierda = medio + 1;
             else derecha = medio - 1;
         }
