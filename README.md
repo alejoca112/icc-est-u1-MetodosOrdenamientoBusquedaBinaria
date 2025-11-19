@@ -11,7 +11,7 @@ Este programa permite gestionar una lista de personas para ordenarlas y buscarla
 1. **Ingresar Personas:** Pide cuántas personas vas a registrar y sus datos (Nombre y Edad).
 2. **Ordenar:** Organiza la lista por **Nombre** o por **Edad** usando algoritmos como Burbuja e Inserción.
 3. **Buscar:** Encuentra a una persona usando **Búsqueda Binaria**.
-   * Nota: ¡Recuerda ordenar la lista antes de buscar!
+   * Nota: Hay que ordenar la lista antes de buscar
 
 ## Ejemplo del Funcionamiento del Programa
 Parte 1: ![alt text](assets/OrdenamientoBusquedaBinaria(1).png)
