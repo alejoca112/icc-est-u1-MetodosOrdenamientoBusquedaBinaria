@@ -34,6 +34,7 @@ public class Controller {
                     break;
                 case 5:
                     System.out.println("Saliendo...");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Opción no válida");
@@ -42,6 +43,7 @@ public class Controller {
     }
 
     public void inputPersons() {
+        System.out.print("¿Cuántas personas desea ingresar? -> ");
         int n = view.inputInt();
         people = new Person[n];
         for (int i = 0; i < n; i++) {
@@ -51,7 +53,7 @@ public class Controller {
     }
 
     public void sortPersons() {
-        int method = view.selectionSortingMethod();
+        int method = view.selectSortingMethod();
         if(people == null || people.length == 0) return;
         switch (method) {
             case 1:
@@ -77,10 +79,21 @@ public class Controller {
         Person result = null;
 
         if(criterion == 1) {
+            if(!searchMethods.isSortedByAge(people)){
+                System.out.println("El arreglo no esta ordenado");
+                return;
+            }
             int age = view.inputAge();
             result = searchMethods.binarySearchByAge(people, age);
+        } else if (criterion == 2) {
+            if(!searchMethods.isSortedByName(people)){
+                System.out.println("El arreglo por nombre no esta Ordenado: ");
+                return;
+            }
+            String name = view.inputName();
+            result = searchMethods.binarySearchByName(people, name);
         }
-        view.displayResult(result);
+        view.displaySearchResult(result);
     }
 
     

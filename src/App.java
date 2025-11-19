@@ -7,6 +7,7 @@ import views.View;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        System.out.println("Estudiante: Geovanny Cabrera");
         View view =  new View();
         SortingMethods sortingMethods = new SortingMethods();
         SearchMethods searchMethods = new SearchMethods();

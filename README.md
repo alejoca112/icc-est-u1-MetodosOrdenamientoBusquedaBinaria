@@ -1,18 +1,19 @@
-## Getting Started
+# Proyecto de Ordenamiento y Búsqueda Binaria
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este programa permite gestionar una lista de personas para ordenarlas y buscarlas, con una visualización especial de cómo funciona la búsqueda binaria paso a paso.
 
-## Folder Structure
+## Información
+* **Estudiante:** [TU NOMBRE]
+* **Materia:** Estructura de Datos
+* **Lenguaje:** Java
 
-The workspace contains two folders by default, where:
+## ¿Qué hace el programa?
+1. **Ingresar Personas:** Pide cuántas personas vas a registrar y sus datos (Nombre y Edad).
+2. **Ordenar:** Organiza la lista por **Nombre** o por **Edad** usando algoritmos como Burbuja e Inserción.
+3. **Buscar:** Encuentra a una persona usando **Búsqueda Binaria**.
+   * Nota: ¡Recuerda ordenar la lista antes de buscar!
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Ejemplo del Funcionamiento del Programa
+Parte 1: ![alt text](assets/OrdenamientoBusquedaBinaria(1).png)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Parte 2: ![alt text](assets/OrdenamientoBusquedaBinaria(2).png)

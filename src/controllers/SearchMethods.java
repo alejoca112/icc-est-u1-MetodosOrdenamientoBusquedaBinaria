@@ -5,8 +5,8 @@ public class SearchMethods {
     public Person binarySearchByAge(Person[] people, int targetAge) {
         int izquierda = 0;
         int derecha = people.length - 1;
-        System.out.println("\n Valor Buscado por Edad: " + targetAge);
-        System.out.println("(Visualizacion de Busqueda Binaria) \n");
+        System.out.println(" Valor Buscado por Edad: " + targetAge);
+        System.out.println("(Visualizacion de Busqueda Binaria)");
 
         while(izquierda<= derecha){
             int medio = izquierda + (derecha - izquierda) / 2;
@@ -15,17 +15,17 @@ public class SearchMethods {
 
             printVisualArray(people, izquierda, derecha);
 
-            System.out.print("bajo: " + izquierda + " alto: " + derecha + "centro" + medio 
-             + "valor Centro" + comparison + "\n");
+            System.out.print("bajo: " + izquierda + " alto: " + derecha + " centro: " + medio 
+             + " valor comparado: " + comparison);
 
             if(comparison == targetAge){
                 System.out.println("--Encontrado--");
                 return people[medio];
             } else if (comparison < targetAge) {
-                System.out.println("DERECHA");
+                System.out.println(" -> DERECHA");
                 izquierda = medio + 1;
             } else {
-                System.out.println("IZQUIERDA");
+                System.out.println(" ->IZQUIERDA");
                 derecha = medio - 1;
             }
             System.out.println();            
@@ -50,6 +50,23 @@ public class SearchMethods {
         return null;
     }
 
+    public boolean isSortedByAge(Person[] people){
+        for(int i = 0; i < people.length - 1; i++){
+            if(people[i].getAge() > people[i+1].getAge()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean isSortedByName(Person[] people){
+        for(int i = 0; i < people.length - 1; i++){
+            if(people[i].getName().compareToIgnoreCase(people[i+1].getName()) > 0){
+                return false;
+            }
+        }
+        return true;
+    }
 
     public void printVisualArray(Person[] people, int izquierda, int derecha) {
         for (int i = izquierda; i < derecha; i++) {

@@ -10,7 +10,7 @@ public class View {
     }
 
     public int showMenu() {
-        System.out.println("\n--- MENÚ ---");
+        System.out.println("--- MENÚ ---");
         System.out.println("1. Ingresar Personas");
         System.out.println("2. Mostrar Personas");
         System.out.println("3. Ordenar Personas");
@@ -26,33 +26,39 @@ public class View {
         return new Person(name, age);
     }
 
-    public int selectionSortingMethod() {
-        System.out.println("\n--- MÉTODOS DE ORDENAMIENTO ---");
+    // CORREGIDO: Nombre cambiado de selectionSortingMethod a selectSortingMethod
+    public int selectSortingMethod() { 
+        System.out.println("--- MÉTODOS DE ORDENAMIENTO ---");
         System.out.println("1. POR NOMBRE (Burbuja)");
-        System.out.println("2. POR NOMBRE(Selección Descendente)" );
-        System.out.println("3. POR EDAD(Inserción)");
-        System.out.println("4. POR NOMBRE(Insercion)");
+        System.out.println("2. POR NOMBRE (Selección Descendente)" );
+        System.out.println("3. POR EDAD (Inserción)");
+        System.out.println("4. POR NOMBRE (Inserción)");
         System.out.print("Seleccione un método: ");
         return inputInt();
     }
 
     public int selectSearchCriterion() {
-        System.out.println("\n--- CRITERIOS DE BÚSQUEDA ---");
-        System.out.println("1. Buscar por EDAD(Binaria)");
+        System.out.println("--- CRITERIOS DE BÚSQUEDA ---");
+        System.out.println("1. Buscar por EDAD (Binaria)");
         System.out.println("2. Buscar por NOMBRE (Binaria)");
         System.out.print("Seleccione criterio: ");
         return inputInt();
     }
+
     public void displayPersons(Person[] people) {
-        System.out.println("\n--- LISTA DE PERSONAS ---");
+        System.out.println("--- LISTA DE PERSONAS ---");
+        if (people == null || people.length == 0) {
+             System.out.println("No hay personas registradas.");
+             return;
+        }
         for (Person p : people) {
             System.out.println(p);
         }
     }
 
-    public void displayResult(Person person) {
+    public void displaySearchResult(Person person) { 
         if (person != null) {
-            System.out.println("\nPersona encontrada: " + person);
+            System.out.println("Persona encontrada: " + person);
         } else {
             System.out.println("Persona no encontrada.");
         }
@@ -64,7 +70,7 @@ public class View {
     }
 
     public String inputName() {
-        System.out.println("Ingrese el nombre: ");
+        System.out.print("Ingrese el nombre: "); 
         return scanner.nextLine();
     }
 
@@ -73,9 +79,8 @@ public class View {
             int val = Integer.parseInt(scanner.nextLine());
             return val;
         } catch (NumberFormatException e) {
-            System.out.println("Entrada inválida, Ingrese de nuevo.");
+            System.out.print("Entrada inválida, Ingrese de nuevo: ");
             return inputInt();
         }
-
     }
 }
