@@ -3,9 +3,9 @@
 Este programa permite gestionar una lista de personas para ordenarlas y buscarlas, con una visualización especial de cómo funciona la búsqueda binaria paso a paso.
 
 ## Información
-* **Estudiante:** [TU NOMBRE]
+* **Estudiante:** Geovanny Cabrera
 * **Materia:** Estructura de Datos
-* **Lenguaje:** Java
+* **Docente:** Ing.Pablo Torres
 
 ## ¿Qué hace el programa?
 1. **Ingresar Personas:** Pide cuántas personas vas a registrar y sus datos (Nombre y Edad).
